@@ -9,7 +9,7 @@ import Foundation
 
 
 // MARK: - ArtObjectClass
-struct RMArtObject: Codable {
+public struct RMArtObject: Codable {
     let id, objectNumber: String
     let title: String
     let titles: [String]?
