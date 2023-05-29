@@ -16,6 +16,12 @@
 		1746D1F92A2371010070E65A /* RijksmuseumUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746D1F82A2371010070E65A /* RijksmuseumUITestsLaunchTests.swift */; };
 		1746D2062A2374F30070E65A /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746D2052A2374F30070E65A /* MainCoordinator.swift */; };
 		1746D2292A24029C0070E65A /* RijksmuseumDB in Frameworks */ = {isa = PBXBuildFile; productRef = 1746D2282A24029C0070E65A /* RijksmuseumDB */; };
+		178B3E292A253B4A0099C9D5 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178B3E282A253B4A0099C9D5 /* AppConfiguration.swift */; };
+		17FC4E242A24FCCE00583A5A /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC4E232A24FCCE00583A5A /* CollectionViewController.swift */; };
+		17FC4E262A24FCF500583A5A /* CollectionViewController+build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC4E252A24FCF500583A5A /* CollectionViewController+build.swift */; };
+		17FC4E282A24FDA000583A5A /* ColectionViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC4E272A24FDA000583A5A /* ColectionViewInteractor.swift */; };
+		17FC4E2A2A24FDB300583A5A /* CollectionViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC4E292A24FDB300583A5A /* CollectionViewPresenter.swift */; };
+		17FC4E2D2A2529B400583A5A /* CollectionViewCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC4E2C2A2529B400583A5A /* CollectionViewCellConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +56,12 @@
 		1746D2052A2374F30070E65A /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		1746D2092A23AC270070E65A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		1746D2262A2402680070E65A /* RijksmuseumDB */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RijksmuseumDB; sourceTree = "<group>"; };
+		178B3E282A253B4A0099C9D5 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		17FC4E232A24FCCE00583A5A /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		17FC4E252A24FCF500583A5A /* CollectionViewController+build.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionViewController+build.swift"; sourceTree = "<group>"; };
+		17FC4E272A24FDA000583A5A /* ColectionViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColectionViewInteractor.swift; sourceTree = "<group>"; };
+		17FC4E292A24FDB300583A5A /* CollectionViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewPresenter.swift; sourceTree = "<group>"; };
+		17FC4E2C2A2529B400583A5A /* CollectionViewCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,8 @@
 				1746D1D52A2370FF0070E65A /* AppDelegate.swift */,
 				1746D1D72A2370FF0070E65A /* SceneDelegate.swift */,
 				1746D2052A2374F30070E65A /* MainCoordinator.swift */,
+				178B3E282A253B4A0099C9D5 /* AppConfiguration.swift */,
+				17FC4E2B2A24FDBB00583A5A /* Collection */,
 				1746D1DE2A2371010070E65A /* Assets.xcassets */,
 				1746D1E02A2371010070E65A /* LaunchScreen.storyboard */,
 				1746D1E32A2371010070E65A /* Info.plist */,
@@ -144,6 +158,18 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		17FC4E2B2A24FDBB00583A5A /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				17FC4E232A24FCCE00583A5A /* CollectionViewController.swift */,
+				17FC4E2C2A2529B400583A5A /* CollectionViewCellConfigurator.swift */,
+				17FC4E272A24FDA000583A5A /* ColectionViewInteractor.swift */,
+				17FC4E292A24FDB300583A5A /* CollectionViewPresenter.swift */,
+				17FC4E252A24FCF500583A5A /* CollectionViewController+build.swift */,
+			);
+			path = Collection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,9 +305,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17FC4E242A24FCCE00583A5A /* CollectionViewController.swift in Sources */,
+				17FC4E2D2A2529B400583A5A /* CollectionViewCellConfigurator.swift in Sources */,
+				17FC4E2A2A24FDB300583A5A /* CollectionViewPresenter.swift in Sources */,
 				1746D2062A2374F30070E65A /* MainCoordinator.swift in Sources */,
 				1746D1D62A2370FF0070E65A /* AppDelegate.swift in Sources */,
+				178B3E292A253B4A0099C9D5 /* AppConfiguration.swift in Sources */,
 				1746D1D82A2370FF0070E65A /* SceneDelegate.swift in Sources */,
+				17FC4E282A24FDA000583A5A /* ColectionViewInteractor.swift in Sources */,
+				17FC4E262A24FCF500583A5A /* CollectionViewController+build.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
