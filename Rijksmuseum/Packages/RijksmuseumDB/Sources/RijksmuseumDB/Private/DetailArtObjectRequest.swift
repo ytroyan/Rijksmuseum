@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ArtObjectRequest: RequestProtocol {
+struct DetailArtObjectRequest: RequestProtocol {
     var apiKey: String
     var language: String
     let objectNumber: String
@@ -32,6 +32,6 @@ struct ArtObjectRequest: RequestProtocol {
     }
 }
 
-struct ArtObjectResponse: Codable {
-    let artObject: RMArtObject
+struct DetailArtObjectResponse: Codable {
+    let artObject: RMDetailArtObject
 }

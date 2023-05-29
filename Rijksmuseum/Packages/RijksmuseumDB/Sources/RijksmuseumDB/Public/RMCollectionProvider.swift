@@ -7,16 +7,7 @@
 
 import Foundation
 
-public struct RMSettings {
-    var apiKey: String
-    var language: String
-    public init(apiKey: String, language: String) {
-        self.apiKey = apiKey
-        self.language = language
-    }
-}
-
-public class RMCollection {
+public class RMCollectionProvider {
     private var settings: RMSettings
     private var sortResult: RMSortResult
     private var page: Page
@@ -41,7 +32,7 @@ public class RMCollection {
     }
     
     public func getCollection() async throws -> [RMArtObject] {
-        let request = CollectionRequest(apiKey: self.settings.apiKey, language: self.settings.language, page: self.page)
+        let request = CollectionRequest(apiKey: self.settings.apiKey, language: self.settings.language.rawValue, page: self.page)
         let endpoint = Endpoint(request: request, responseType: CollectionResponse.self)
         return try await urlSession.getRequest(endpoint).artObjects
     }

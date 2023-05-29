@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class RMArtObjectLoader {
+public class RMArtObjectProvider {
     private var settings: RMSettings
     private var urlSession: URLSession
     
@@ -16,11 +16,11 @@ public class RMArtObjectLoader {
         self.urlSession = urlSession
     }
     
-    public func detailArtObject(for objectNumber: String) async throws -> RMArtObject {
-        let request: RequestProtocol =  ArtObjectRequest(apiKey: self.settings.apiKey,
-                                                         language: self.settings.language,
+    public func detailArtObject(for objectNumber: String) async throws -> RMDetailArtObject {
+        let request: RequestProtocol =  DetailArtObjectRequest(apiKey: self.settings.apiKey,
+                                                         language: self.settings.language.rawValue,
                                                          objectNumber: objectNumber)
-        let endpoint = Endpoint(request: request, responseType: ArtObjectResponse.self)
+        let endpoint = Endpoint(request: request, responseType: DetailArtObjectResponse.self)
         return try await urlSession.getRequest(endpoint).artObject
     }
 }
