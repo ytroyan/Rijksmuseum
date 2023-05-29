@@ -26,6 +26,9 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "RijksmuseumDBTests",
-            dependencies: ["RijksmuseumDB"]),
+            dependencies: ["RijksmuseumDB"],
+            resources: [
+                .process("DetailArtObject.json")]
+        ),
     ]
 )

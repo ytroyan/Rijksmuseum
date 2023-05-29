@@ -30,7 +30,7 @@ class MockURLProtocol: URLProtocol {
             } else {
                 path = url.relativePath
             }
-            let data = MockURLProtocol.mockData[path]!
+            guard let data = MockURLProtocol.mockData[path] else {fatalError("data doesn't exist")}
             client?.urlProtocol(self, didLoad: data)
             client?.urlProtocol(self, didReceive: HTTPURLResponse(), cacheStoragePolicy: .allowed)
         }

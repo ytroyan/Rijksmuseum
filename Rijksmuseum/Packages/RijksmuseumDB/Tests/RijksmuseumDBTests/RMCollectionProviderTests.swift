@@ -15,7 +15,7 @@ final class RMCollectionProviderTests: XCTestCase {
     }
     
     func testGetCollectionError() async throws {
-        let sut = RMCollectionProvider.init(settings: settings, offset: 10)
+        let sut = RMCollectionProvider.init(settings: settings, offset: 1)
         do {
             let object = try await sut.getCollection()
             XCTFail("it should throws error")
@@ -30,15 +30,14 @@ final class RMCollectionProviderTests: XCTestCase {
         let configuration = URLSessionConfiguration.default
         configuration.protocolClasses = [MockURLProtocol.self]
         let mockURLSession = URLSession(configuration: configuration)
+        let sut = RMCollectionProvider.init(settings: settings, offset: 1, limit: 1, urlSession: mockURLSession)
         
         let object = RMArtObject(id: "test", objectNumber: "test", title: "", webImage: nil, headerImage: nil)
         let arrayOfObjects: [RMArtObject] = [object]
         let response = CollectionResponse(count: 1, artObjects: arrayOfObjects)
         let encoder = JSONEncoder()
         let data = try! encoder.encode(response)
-        MockURLProtocol.mockData["/api/nl/collection?key=test&ps=10&p=10&s=artist"] = data
-        
-        let sut = RMCollectionProvider.init(settings: settings, offset: 10, urlSession: mockURLSession)
+        MockURLProtocol.mockData["/api/nl/collection/BK-AM-33-J?key=test"] = data
         let artObjects = try await sut.getCollection()
         XCTAssertEqual(artObjects.count, 1)
     }
