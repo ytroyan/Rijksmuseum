@@ -21,4 +21,5 @@ public struct RMDetailArtObject: Codable {
     let physicalMedium, longTitle, subTitle, scLabelLine: String
     let showImage: Bool
     let location: String
+    let webImage, headerImage: RMImage?
 }

@@ -10,4 +10,5 @@ import Foundation
 public struct RMArtObject: Codable {
     let id, objectNumber: String
     let title: String
+    let webImage, headerImage: RMImage?
 }
