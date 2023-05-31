@@ -17,6 +17,7 @@ protocol CollectionViewInteracting {
 
 protocol ColectionViewDataProvider {
     var items: [ArtObject] {get}
+    func loadImage(for object: ArtObject, handler: ((UIImage?)->Void)?)
 }
 
 
@@ -53,7 +54,7 @@ class ColectionViewInteractor: CollectionViewInteracting {
     func fetchData() async {
        
         do {
-            items = try await self.dataProvider.getCollection()
+            items += try await self.dataProvider.getCollection()
         } catch {
             await MainActor.run(body: {
                 delegate?.showAlertMessage(message: "\(error.localizedDescription)")
@@ -62,13 +63,13 @@ class ColectionViewInteractor: CollectionViewInteracting {
     }
     
     func collectionViewReachedEnd() {
-        self.dataProvider.limit += 1
-//        Task {
-//            await fetchData()
-//            await MainActor.run(body: {
-//                presenter.itemsUpdated()
-//            })
-//        }
+        self.dataProvider.offset += 1
+        Task {
+            await fetchData()
+            await MainActor.run(body: {
+                presenter.itemsUpdated()
+            })
+        }
     }
     
     func didSelectItem(at indexPath: IndexPath) {
@@ -79,6 +80,16 @@ class ColectionViewInteractor: CollectionViewInteracting {
 
 extension ColectionViewInteractor: ColectionViewDataProvider {
     
+    func loadImage(for object: ArtObject, handler: ((UIImage?) -> Void)?) {
+        guard let urlString = object.imageURL, object.image == nil else {return}
+        
+        Task {
+            let image = try? await imageProvider.loadImage(for: urlString)
+            DispatchQueue.main.async {
+                handler?(image)
+            }
+        }
+    }
 }
 
 

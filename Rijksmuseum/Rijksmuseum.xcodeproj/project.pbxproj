@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1709FAE02A27D23F00911F88 /* ImageStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 1709FADF2A27D23F00911F88 /* ImageStorage */; };
 		1746D1D62A2370FF0070E65A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746D1D52A2370FF0070E65A /* AppDelegate.swift */; };
 		1746D1D82A2370FF0070E65A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746D1D72A2370FF0070E65A /* SceneDelegate.swift */; };
 		1746D1DF2A2371010070E65A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1746D1DE2A2371010070E65A /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1709FADE2A27D1E500911F88 /* ImageStorage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ImageStorage; sourceTree = "<group>"; };
 		1746D1D22A2370FF0070E65A /* Rijksmuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rijksmuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1746D1D52A2370FF0070E65A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1746D1D72A2370FF0070E65A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1709FAE02A27D23F00911F88 /* ImageStorage in Frameworks */,
 				1746D2292A24029C0070E65A /* RijksmuseumDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,6 +103,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1709FAE12A27D29700911F88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				179ECFEA2A2740DC0048AC88 /* ArtObject.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1709FAE22A27D2A900911F88 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				179ECFEE2A274D5D0048AC88 /* ImageProvider.swift */,
+				179ECFEC2A274CE90048AC88 /* CollectionProvider.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		1709FAE32A27D2F800911F88 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				179ECFF02A2755890048AC88 /* CollectionHeaderView.swift */,
+				178B3E2A2A25EA8A0099C9D5 /* CollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1709FAE42A27D30700911F88 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				17FC4E2C2A2529B400583A5A /* CollectionViewCellConfigurator.swift */,
+				17FC4E272A24FDA000583A5A /* ColectionViewInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		1709FAE52A27D31600911F88 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				17FC4E232A24FCCE00583A5A /* CollectionViewController.swift */,
+				17FC4E252A24FCF500583A5A /* CollectionViewController+build.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		1709FAE62A27D32000911F88 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				17FC4E292A24FDB300583A5A /* CollectionViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		1746D1C92A2370FF0070E65A = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +213,7 @@
 		1746D2252A24023E0070E65A /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				1709FADE2A27D1E500911F88 /* ImageStorage */,
 				1746D2262A2402680070E65A /* RijksmuseumDB */,
 			);
 			path = Packages;
@@ -173,16 +229,12 @@
 		17FC4E2B2A24FDBB00583A5A /* Collection */ = {
 			isa = PBXGroup;
 			children = (
-				17FC4E232A24FCCE00583A5A /* CollectionViewController.swift */,
-				17FC4E2C2A2529B400583A5A /* CollectionViewCellConfigurator.swift */,
-				17FC4E272A24FDA000583A5A /* ColectionViewInteractor.swift */,
-				179ECFF02A2755890048AC88 /* CollectionHeaderView.swift */,
-				179ECFEE2A274D5D0048AC88 /* ImageProvider.swift */,
-				179ECFEC2A274CE90048AC88 /* CollectionProvider.swift */,
-				179ECFEA2A2740DC0048AC88 /* ArtObject.swift */,
-				17FC4E292A24FDB300583A5A /* CollectionViewPresenter.swift */,
-				17FC4E252A24FCF500583A5A /* CollectionViewController+build.swift */,
-				178B3E2A2A25EA8A0099C9D5 /* CollectionViewCell.swift */,
+				1709FAE52A27D31600911F88 /* ViewController */,
+				1709FAE42A27D30700911F88 /* Interactors */,
+				1709FAE32A27D2F800911F88 /* Views */,
+				1709FAE22A27D2A900911F88 /* Workers */,
+				1709FAE12A27D29700911F88 /* Model */,
+				1709FAE62A27D32000911F88 /* Presenter */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -205,6 +257,7 @@
 			name = Rijksmuseum;
 			packageProductDependencies = (
 				1746D2282A24029C0070E65A /* RijksmuseumDB */,
+				1709FADF2A27D23F00911F88 /* ImageStorage */,
 			);
 			productName = Rijksmuseum;
 			productReference = 1746D1D22A2370FF0070E65A /* Rijksmuseum.app */;
@@ -667,6 +720,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1709FADF2A27D23F00911F88 /* ImageStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ImageStorage;
+		};
 		1746D2282A24029C0070E65A /* RijksmuseumDB */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RijksmuseumDB;

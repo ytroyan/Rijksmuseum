@@ -39,32 +39,27 @@ class CollectionViewCellConfigurator: CollectionViewCellConfigurating {
     
     var cellRegistration: UICollectionView.CellRegistration<UICollectionViewCell, ArtObject> {
         UICollectionView.CellRegistration<UICollectionViewCell, ArtObject> { (cell, indexPath, item) in
+            print(item.id)
             var content = UIListContentConfiguration.subtitleCell()
             content.image = item.image
             content.directionalLayoutMargins = .zero
             content.axesPreservingSuperviewLayoutMargins = []
             content.secondaryText = item.title
             cell.contentConfiguration = content
-            Task {
-                await self.updateContent(item: item)
-            }
+            self.updateContent(item: item)
         }
     }
     
-    func updateContent(item: ArtObject) async {
-        guard let urlString = item.imageURL, item.image == nil else {return}
-            do {
-                if let image = try await ImageLoader().load(url: urlString) {
-                    await MainActor.run(body: {
-                        var updatedSnapshot = self.dataSource.snapshot()
-                        guard let datasourceIndex = updatedSnapshot.indexOfItem(item) else {return}
-                        let item = self.dataProvider.items[datasourceIndex]
-                        item.image = image
-                        updatedSnapshot.reloadItems([item])
-                         self.dataSource.apply(updatedSnapshot, animatingDifferences: true)
-                    })
-                }
-            } catch {}
+    func updateContent(item: ArtObject) {
+        self.dataProvider.loadImage(for: item) { image in
+            guard let image = image else {return}
+            var updatedSnapshot = self.dataSource.snapshot()
+            guard let datasourceIndex = updatedSnapshot.indexOfItem(item) else {return}
+            let item = self.dataProvider.items[datasourceIndex]
+            item.image = image
+            updatedSnapshot.reloadItems([item])
+            self.dataSource.apply(updatedSnapshot, animatingDifferences: true)
+        }
     }
     
     var headerRegistration: UICollectionView.SupplementaryRegistration<CollectionHeaderView> {
