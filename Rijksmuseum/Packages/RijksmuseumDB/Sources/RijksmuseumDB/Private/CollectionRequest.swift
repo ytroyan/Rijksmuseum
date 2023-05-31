@@ -20,7 +20,7 @@ struct CollectionRequest: RequestProtocol {
     }
         
     var requestString: String {
-        "https://www.rijksmuseum.nl/api/\(language)/collection?key=\(apiKey)&ps=\(page.limit)&p=\(page.page)&s=\(RMSortResult.artist.rawValue)"
+        "https://www.rijksmuseum.nl/api/\(language)/collection?key=\(apiKey)&ps=\(page.limit)&p=\(page.page)&s=\(RMSortResult.artist.rawValue)&imgonly=true"
     }
     
     init(apiKey: String, language: String, page: Int, limit: Int) {

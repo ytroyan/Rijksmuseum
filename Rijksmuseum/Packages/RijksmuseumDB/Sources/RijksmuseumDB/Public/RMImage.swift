@@ -9,5 +9,5 @@ import Foundation
 
 public struct RMImage: Codable {
     let guid: String?
-    let url: String?
+    public let url: String?
 }

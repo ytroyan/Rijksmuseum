@@ -26,7 +26,7 @@ final class MainCoordinator {
     }
     
     func start() {
-        let vc = UIViewController()
+        let vc = CollectionViewController.build(self)
         let navVC = UINavigationController(rootViewController: vc)
         window.rootViewController = navVC
         mainNavigation = navVC
@@ -37,7 +37,8 @@ final class MainCoordinator {
 extension MainCoordinator: MainInteractorDelegate {
     func showDetailArtObject(id: String) {
         let vc = UIViewController()
-        mainNavigation?.showDetailViewController(vc, sender: self)
+        vc.view.backgroundColor = .brown
+        mainNavigation?.pushViewController(vc, animated: true)
     }
 }
 

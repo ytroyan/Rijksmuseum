@@ -7,114 +7,111 @@
 
 import UIKit
 
-private let reuseIdentifier = "collectionCell"
-
-protocol CollectionViewDisplaying: AnyObject {
-    func display(title: String)
-    func reloadData()
+enum ElemeKinds {
+    static let sectionHeaderElementKind = "sectionHeaderElementKind"
+    static let sectionFooterElementKind = "sectionFooterElementKind"
 }
 
-class CollectionViewController: UICollectionViewController {
-    
-    private let interactor: CollectionViewInteracting
-    private let cellConfiguration: CollectionViewCellConfigurating
-    
-    required init(interactor: CollectionViewInteracting,
-                  cellConfiguration: CollectionViewCellConfigurating) {
+class CollectionViewLayout: UICollectionViewCompositionalLayout {
         
-        self.interactor = interactor
-        self.cellConfiguration = cellConfiguration
-        super.init(nibName: nil, bundle: nil)
+    init() {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                              heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 0)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                               heightDimension: .fractionalWidth(0.4))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
+                                                       subitems: [item])
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: 20, trailing: 20)
+        let titleSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                               heightDimension: .estimated(Appearance.sectionHeaderFont.lineHeight))
+        let titleSupplementary = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: titleSize,
+            elementKind: ElemeKinds.sectionHeaderElementKind,
+            alignment: .top)
+        
+        section.boundarySupplementaryItems = [titleSupplementary]
+
+        super.init(section: section)
     }
     
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+}
 
+protocol CollectionViewDisplaying: AnyObject {
+    func display(title: String)
+    func itemsUpdated()
+}
+
+class CollectionViewController: UICollectionViewController {
+    
+    private let interactor: CollectionViewInteracting
+    private var cellConfiguration: CollectionViewCellConfigurating
+    
+    required init(interactor: CollectionViewInteracting,
+                  cellConfiguration: CollectionViewCellConfigurating,
+                  collectionViewLayout: UICollectionViewLayout = CollectionViewLayout()) {
+        self.interactor = interactor
+        self.cellConfiguration = cellConfiguration
+        super.init(collectionViewLayout: collectionViewLayout)
+    }
+        
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.cellConfiguration.registerReuseIdentifiers(for: collectionView)
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        let cellRegistration = self.cellConfiguration.cellRegistration
+        self.cellConfiguration.dataSource = UICollectionViewDiffableDataSource<String, ArtObject>(collectionView: collectionView) {
+            (collectionView: UICollectionView, indexPath: IndexPath, item: ArtObject) -> UICollectionViewCell? in
+            return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
+        }
+        
+        let headerRegistration = self.cellConfiguration.headerRegistration
+        self.cellConfiguration.dataSource.supplementaryViewProvider = { collectionView, elementKind, indexPath in
+            return collectionView.dequeueConfiguredReusableSupplementary(using: headerRegistration, for: indexPath)
+        }
+        
+        collectionView.delegate = self
+        interactor.viewDidLoad()
 
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        interactor.didSelectItem(at: indexPath)
     }
-    */
-
-    // MARK: UICollectionViewDataSource
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
-        // Configure the cell
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.section ==  collectionView.numberOfSections - 1,
+           indexPath.item == collectionView.numberOfItems(inSection: indexPath.section) - 1 {
+            interactor.collectionViewReachedEnd()
+        }
+    }
     
-        return cell
-    }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
-
 }
 
 extension CollectionViewController: CollectionViewDisplaying {
+    
     func display(title: String) {
-        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = title
     }
     
-    func reloadData() {
-        
+    func itemsUpdated() {
+        self.cellConfiguration.updateCells()
     }
-
 }
+
+
