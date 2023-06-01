@@ -21,7 +21,7 @@ protocol ColectionViewDataProvider {
 }
 
 
-class ColectionViewInteractor: CollectionViewInteracting {
+final class ColectionViewInteractor: CollectionViewInteracting {
     weak var delegate: MainInteractorDelegate?
     
     var presenter: CollectionViewPresenting
