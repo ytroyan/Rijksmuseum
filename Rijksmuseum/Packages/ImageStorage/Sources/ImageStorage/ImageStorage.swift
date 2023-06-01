@@ -19,7 +19,7 @@ public struct ImageStorage: ImageStoraging {
                 try data.write(to: fileURL)
             }
         } catch {
-            print("error writing data \(error)")
+            print(error)
         }
     }
     
@@ -33,7 +33,6 @@ public struct ImageStorage: ImageStoraging {
             let image = UIImage(data: data)
             return image
         } catch {
-            print("error reading data \(error)")
             return nil
         }
     }
@@ -46,7 +45,6 @@ public struct ImageStorage: ImageStoraging {
                                                                        includingPropertiesForKeys: nil,
                                                                        options: .skipsHiddenFiles)
             for fileURL in fileURLs {
-                print("file \(fileURL)")
                 try FileManager.default.removeItem(at: fileURL)
             }
         } catch  { print(error) }
