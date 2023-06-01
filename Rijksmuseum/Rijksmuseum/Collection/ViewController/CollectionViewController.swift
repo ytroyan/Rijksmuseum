@@ -131,17 +131,20 @@ extension CollectionViewController: CollectionViewDisplaying {
         print(state)
         switch state {
             case .loading:
+                collectionView.isScrollEnabled = false
                 progressView.startAnimating()
                 collectionView.alpha = 0.5
                 collectionView.bringSubviewToFront(progressView)
                 collectionView.sendSubviewToBack(emptyDataImageView)
             case .loaded:
+                collectionView.isScrollEnabled = true
                 collectionView.alpha = 1
                 progressView.stopAnimating()
                 collectionView.sendSubviewToBack(progressView)
                 collectionView.sendSubviewToBack(emptyDataImageView)
                 self.cellConfiguration.updateCells()
             case .notData:
+                collectionView.isScrollEnabled = true
                 collectionView.alpha = 1
                 collectionView.sendSubviewToBack(progressView)
                 collectionView.bringSubviewToFront(emptyDataImageView)
