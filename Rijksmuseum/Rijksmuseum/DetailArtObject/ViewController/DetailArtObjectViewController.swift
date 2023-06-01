@@ -31,7 +31,6 @@ class DetailArtObjectViewController: UIViewController {
     lazy var longTitleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.textColor = .darkText
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -57,7 +56,7 @@ class DetailArtObjectViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = .systemBackground
         view.addSubview(imageView)
         view.addSubview(longTitleLabel)
         view.addSubview(webLinkButton)
