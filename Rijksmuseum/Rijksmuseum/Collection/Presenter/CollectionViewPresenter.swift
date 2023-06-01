@@ -8,18 +8,28 @@
 import Foundation
 
 protocol CollectionViewPresenting {
-    func didLoad()
-    func itemsUpdated()
+    func started()
+    func loading()
+    func updated()
+    func notFound()
 }
 
 class CollectionViewPresenter: CollectionViewPresenting {
+    func notFound() {
+        viewController?.statChanged(state: .notData)
+    }
+    
+    func loading() {
+        viewController?.statChanged(state: .loading)
+    }
+    
     weak var viewController: CollectionViewDisplaying?
     
-    func didLoad() {
+    func started() {
         viewController?.display(title: "RijksMuseum")
     }
     
-    func itemsUpdated() {
-        viewController?.itemsUpdated()
+    func updated() {
+        viewController?.statChanged(state: .loaded)
     }
 }

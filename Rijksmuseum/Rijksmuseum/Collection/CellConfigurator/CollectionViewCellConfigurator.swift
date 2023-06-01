@@ -41,10 +41,12 @@ class CollectionViewCellConfigurator: CollectionViewCellConfigurating {
         UICollectionView.CellRegistration<UICollectionViewCell, ArtObject> { (cell, indexPath, item) in
             print(item.id)
             var content = UIListContentConfiguration.subtitleCell()
-            content.image = item.image
+            content.imageProperties.maximumSize = CGSize(width: 100, height: 100)
+            content.image = item.image != nil ? item.image : UIImage.animatedImage(for: "photo")
             content.directionalLayoutMargins = .zero
             content.axesPreservingSuperviewLayoutMargins = []
-            content.secondaryText = item.title
+            content.text = item.title
+            content.textProperties.font = UIFont.preferredFont(forTextStyle: .caption2)
             cell.contentConfiguration = content
             self.updateContent(item: item)
         }
@@ -84,5 +86,26 @@ class CollectionViewCellConfigurator: CollectionViewCellConfigurating {
         DispatchQueue.main.async {
             self.dataSource.apply(initialSnapshot, animatingDifferences: true)
         }
+    }
+}
+
+import CoreImage
+extension UIImage {
+    func imageWithAlpha(alpha: CGFloat) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        draw(at: CGPointZero, blendMode: .normal, alpha: alpha)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage!
+    }
+    static func animatedImage(for systemName: String, duration: TimeInterval = 2, pointSize: CGFloat = 100) -> UIImage {
+        let configuration = UIImage.SymbolConfiguration(pointSize: pointSize)
+        let image = UIImage(systemName: systemName, withConfiguration: configuration)!
+        var images: [UIImage] = []
+        for i in 2...20 {
+            images.append(image.imageWithAlpha(alpha: 1.0/CGFloat(i)))
+        }
+        images.append(contentsOf: images.reversed().dropLast())
+        return UIImage.animatedImage(with: images, duration: duration)!
     }
 }

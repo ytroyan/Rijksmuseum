@@ -39,20 +39,19 @@ class ColectionViewInteractor: CollectionViewInteracting {
         self.dataProvider = provider
         self.imageProvider = imageProvider
     }
-   
     
     func viewDidLoad() {
-        presenter.didLoad()
+        presenter.started()
+        presenter.loading()
         Task {
             await fetchData()
             await MainActor.run(body: {
-                presenter.itemsUpdated()
+                itemsUpdated()
             })
         }
     }
     
-    func fetchData() async {
-       
+    private func fetchData() async {
         do {
             items += try await self.dataProvider.getCollection()
         } catch {
@@ -63,12 +62,21 @@ class ColectionViewInteractor: CollectionViewInteracting {
     }
     
     func collectionViewReachedEnd() {
+        presenter.loading()
         self.dataProvider.offset += 1
         Task {
             await fetchData()
             await MainActor.run(body: {
-                presenter.itemsUpdated()
+                itemsUpdated()
             })
+        }
+    }
+    
+    private func itemsUpdated() {
+        if !items.isEmpty {
+            presenter.updated()
+        } else {
+            presenter.notFound()
         }
     }
     
@@ -79,7 +87,6 @@ class ColectionViewInteractor: CollectionViewInteracting {
 }
 
 extension ColectionViewInteractor: ColectionViewDataProvider {
-    
     func loadImage(for object: ArtObject, handler: ((UIImage?) -> Void)?) {
         guard let urlString = object.imageURL, object.image == nil else {return}
         

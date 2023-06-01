@@ -12,6 +12,10 @@ enum ElemeKinds {
     static let sectionFooterElementKind = "sectionFooterElementKind"
 }
 
+enum CollectionViewState {
+    case loading, loaded, notData
+}
+
 class CollectionViewLayout: UICollectionViewCompositionalLayout {
         
     init() {
@@ -48,13 +52,26 @@ class CollectionViewLayout: UICollectionViewCompositionalLayout {
 
 protocol CollectionViewDisplaying: AnyObject {
     func display(title: String)
-    func itemsUpdated()
+    func statChanged(state: CollectionViewState)
 }
 
 class CollectionViewController: UICollectionViewController {
     
     private let interactor: CollectionViewInteracting
     private var cellConfiguration: CollectionViewCellConfigurating
+    
+    lazy var progressView: UIActivityIndicatorView = {
+        let view = UIActivityIndicatorView(style: .large)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    lazy var emptyDataImageView: UIImageView = {
+        let image = UIImage(systemName: "wifi.exclamationmark", withConfiguration: UIImage.SymbolConfiguration(pointSize: 60))
+        let view = UIImageView(image: image)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
     
     required init(interactor: CollectionViewInteracting,
                   cellConfiguration: CollectionViewCellConfigurating,
@@ -83,7 +100,14 @@ class CollectionViewController: UICollectionViewController {
         self.cellConfiguration.dataSource.supplementaryViewProvider = { collectionView, elementKind, indexPath in
             return collectionView.dequeueConfiguredReusableSupplementary(using: headerRegistration, for: indexPath)
         }
-        
+        view.addSubview(progressView)
+        progressView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        progressView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        collectionView.addSubview(emptyDataImageView)
+        collectionView.sendSubviewToBack(emptyDataImageView)
+        emptyDataImageView.isHidden = true
+        emptyDataImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        emptyDataImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         collectionView.delegate = self
         interactor.viewDidLoad()
 
@@ -103,14 +127,31 @@ class CollectionViewController: UICollectionViewController {
 }
 
 extension CollectionViewController: CollectionViewDisplaying {
+    func statChanged(state: CollectionViewState) {
+        print(state)
+        switch state {
+            case .loading:
+                progressView.startAnimating()
+                collectionView.alpha = 0.5
+                collectionView.bringSubviewToFront(progressView)
+                collectionView.sendSubviewToBack(emptyDataImageView)
+            case .loaded:
+                collectionView.alpha = 1
+                progressView.stopAnimating()
+                collectionView.sendSubviewToBack(progressView)
+                collectionView.sendSubviewToBack(emptyDataImageView)
+                self.cellConfiguration.updateCells()
+            case .notData:
+                collectionView.alpha = 1
+                collectionView.sendSubviewToBack(progressView)
+                collectionView.bringSubviewToFront(emptyDataImageView)
+        }
+    }
+    
     
     func display(title: String) {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = title
-    }
-    
-    func itemsUpdated() {
-        self.cellConfiguration.updateCells()
     }
 }
 

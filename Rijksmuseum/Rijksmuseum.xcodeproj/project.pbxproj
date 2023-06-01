@@ -132,7 +132,6 @@
 		1709FAE42A27D30700911F88 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
-				17FC4E2C2A2529B400583A5A /* CollectionViewCellConfigurator.swift */,
 				17FC4E272A24FDA000583A5A /* ColectionViewInteractor.swift */,
 			);
 			path = Interactors;
@@ -153,6 +152,14 @@
 				17FC4E292A24FDB300583A5A /* CollectionViewPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1709FAE72A27D3CF00911F88 /* CellConfigurator */ = {
+			isa = PBXGroup;
+			children = (
+				17FC4E2C2A2529B400583A5A /* CollectionViewCellConfigurator.swift */,
+			);
+			path = CellConfigurator;
 			sourceTree = "<group>";
 		};
 		1746D1C92A2370FF0070E65A = {
@@ -229,6 +236,7 @@
 		17FC4E2B2A24FDBB00583A5A /* Collection */ = {
 			isa = PBXGroup;
 			children = (
+				1709FAE72A27D3CF00911F88 /* CellConfigurator */,
 				1709FAE52A27D31600911F88 /* ViewController */,
 				1709FAE42A27D30700911F88 /* Interactors */,
 				1709FAE32A27D2F800911F88 /* Views */,
