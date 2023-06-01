@@ -37,5 +37,19 @@ public struct ImageStorage: ImageStoraging {
             return nil
         }
     }
+    
+    public func removeAll() {
+        let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        
+        do {
+            let fileURLs = try FileManager.default.contentsOfDirectory(at: documentsUrl,
+                                                                       includingPropertiesForKeys: nil,
+                                                                       options: .skipsHiddenFiles)
+            for fileURL in fileURLs {
+                print("file \(fileURL)")
+                try FileManager.default.removeItem(at: fileURL)
+            }
+        } catch  { print(error) }
+    }
 }
 
