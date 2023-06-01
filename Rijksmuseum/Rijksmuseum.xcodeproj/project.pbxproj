@@ -48,6 +48,8 @@
 		17A005422A28E41D006D2BEF /* DetailArtObjectViewController+build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A005412A28E41D006D2BEF /* DetailArtObjectViewController+build.swift */; };
 		17A005442A28E434006D2BEF /* DetailArtObjectViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A005432A28E434006D2BEF /* DetailArtObjectViewPresenter.swift */; };
 		17A005462A28E453006D2BEF /* DetailArtObjectViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A005452A28E453006D2BEF /* DetailArtObjectViewInteractor.swift */; };
+		17A005482A28EE69006D2BEF /* DetailArtObjectProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A005472A28EE69006D2BEF /* DetailArtObjectProvider.swift */; };
+		17A0054A2A28EF79006D2BEF /* DetailArtObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A005492A28EF79006D2BEF /* DetailArtObject.swift */; };
 		17FC4E242A24FCCE00583A5A /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC4E232A24FCCE00583A5A /* CollectionViewController.swift */; };
 		17FC4E262A24FCF500583A5A /* CollectionViewController+build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC4E252A24FCF500583A5A /* CollectionViewController+build.swift */; };
 		17FC4E282A24FDA000583A5A /* ColectionViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC4E272A24FDA000583A5A /* ColectionViewInteractor.swift */; };
@@ -106,6 +108,8 @@
 		17A005412A28E41D006D2BEF /* DetailArtObjectViewController+build.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailArtObjectViewController+build.swift"; sourceTree = "<group>"; };
 		17A005432A28E434006D2BEF /* DetailArtObjectViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArtObjectViewPresenter.swift; sourceTree = "<group>"; };
 		17A005452A28E453006D2BEF /* DetailArtObjectViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArtObjectViewInteractor.swift; sourceTree = "<group>"; };
+		17A005472A28EE69006D2BEF /* DetailArtObjectProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArtObjectProvider.swift; sourceTree = "<group>"; };
+		17A005492A28EF79006D2BEF /* DetailArtObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArtObject.swift; sourceTree = "<group>"; };
 		17FC4E232A24FCCE00583A5A /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		17FC4E252A24FCF500583A5A /* CollectionViewController+build.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionViewController+build.swift"; sourceTree = "<group>"; };
 		17FC4E272A24FDA000583A5A /* ColectionViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColectionViewInteractor.swift; sourceTree = "<group>"; };
@@ -290,12 +294,54 @@
 		17A005402A28E3F4006D2BEF /* DetailArtObject */ = {
 			isa = PBXGroup;
 			children = (
-				1709FB082A28CEFA00911F88 /* DetailArtObjectViewController.swift */,
-				17A005432A28E434006D2BEF /* DetailArtObjectViewPresenter.swift */,
-				17A005452A28E453006D2BEF /* DetailArtObjectViewInteractor.swift */,
-				17A005412A28E41D006D2BEF /* DetailArtObjectViewController+build.swift */,
+				17A0054B2A28F0CC006D2BEF /* ViewController */,
+				17A0054C2A28F0DA006D2BEF /* Presenter */,
+				17A0054D2A28F0E2006D2BEF /* Interactor */,
+				17A0054E2A28F0EE006D2BEF /* Workers */,
+				17A0054F2A28F100006D2BEF /* Model */,
 			);
 			path = DetailArtObject;
+			sourceTree = "<group>";
+		};
+		17A0054B2A28F0CC006D2BEF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1709FB082A28CEFA00911F88 /* DetailArtObjectViewController.swift */,
+				17A005412A28E41D006D2BEF /* DetailArtObjectViewController+build.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		17A0054C2A28F0DA006D2BEF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				17A005432A28E434006D2BEF /* DetailArtObjectViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		17A0054D2A28F0E2006D2BEF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				17A005452A28E453006D2BEF /* DetailArtObjectViewInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		17A0054E2A28F0EE006D2BEF /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				17A005472A28EE69006D2BEF /* DetailArtObjectProvider.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		17A0054F2A28F100006D2BEF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				17A005492A28EF79006D2BEF /* DetailArtObject.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		17FC4E2B2A24FDBB00583A5A /* Collection */ = {
@@ -456,6 +502,8 @@
 				1746D2062A2374F30070E65A /* MainCoordinator.swift in Sources */,
 				1746D1D62A2370FF0070E65A /* AppDelegate.swift in Sources */,
 				179ECFEB2A2740DC0048AC88 /* ArtObject.swift in Sources */,
+				17A005482A28EE69006D2BEF /* DetailArtObjectProvider.swift in Sources */,
+				17A0054A2A28EF79006D2BEF /* DetailArtObject.swift in Sources */,
 				178B3E292A253B4A0099C9D5 /* AppConfiguration.swift in Sources */,
 				1746D1D82A2370FF0070E65A /* SceneDelegate.swift in Sources */,
 				17A005422A28E41D006D2BEF /* DetailArtObjectViewController+build.swift in Sources */,

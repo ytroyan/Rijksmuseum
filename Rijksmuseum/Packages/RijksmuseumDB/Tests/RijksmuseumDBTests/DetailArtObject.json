@@ -1,213 +1,213 @@
 {
-"elapsedMilliseconds":148,
-"artObject":{
-"links":{
-"search":"http://www.rijksmuseum.nl/api/nl/collection"
-},
-"id":"en-BK-AM-33-J",
-"priref":"24251",
-"objectNumber":"BK-AM-33-J",
-"language":"en",
-"title":"Ten weepers from the tomb of Isabella of Bourbon",
-"copyrightHolder":null,
-"webImage":{},
-"colors":[],
-"colorsWithNormalization":[],
-"normalizedColors":[],
-"normalized32Colors":[],
-"materialsThesaurus":[
-],
-"techniquesThesaurus":[
-],
-"productionPlacesThesaurus":[
-],
-"titles":[
-"Weeper Wearing a Bourrelet with Dagged Lappets on her Head, from the Tomb of Isabella of Bourbon (1436-1465)"
-],
-"description":"Ze staart recht voor zich uit en heeft de rechterhand over de linker gelegd, waarmee zij een sjaal ophoudt. Op het met vlechten getooide hoofd staat de met een kleinood versierde bourrelet, waarvan korte lappen met gekartelde rand afhangen. Haar overkleed met zakmouwen en een van voren dichtgeregen stijf staande kraag wordt samengehouden door een brede ceintuur. De van de rug hangende mantel met opstaande kraag wordt voor de borst door een band en agrafen vastgehouden en valt tot voor de voeten.",
-"labelText":null,
-"objectTypes":[
-"tomb figure"
-],
-"objectCollection":[
-"sculptures"
-],
-"makers":[
-],
-"principalMakers":[
-{
-"name":"Borman workshop",
-"unFixedName":"Borman workshop",
-"placeOfBirth":null,
-"dateOfBirth":null,
-"dateOfBirthPrecision":null,
-"dateOfDeath":null,
-"dateOfDeathPrecision":null,
-"placeOfDeath":null,
-"occupation":[
-],
-"roles":[
-"sculptor"
-],
-"nationality":null,
-"biography":null,
-"productionPlaces":[
-],
-"qualification":"attributed to",
-"labelDesc":"attributed to Borman workshop"
-},
-{
-"name":"Renier van Thienen (I)",
-"unFixedName":"Thienen, Renier van (I)",
-"placeOfBirth":"Tienen",
-"dateOfBirth":"1465",
-"dateOfBirthPrecision":null,
-"dateOfDeath":"1498-06",
-"dateOfDeathPrecision":"before",
-"placeOfDeath":null,
-"occupation":[
-"caster",
-"brazier"
-],
-"roles":[
-"caster"
-],
-"nationality":"Vlaams",
-"biography":null,
-"productionPlaces":[
-"Brussels"
-],
-"qualification":"attributed to",
-"labelDesc":"attributed to Renier van Thienen (I) (1465 - before jun-1498), Brussels"
-}
-],
-"plaqueDescriptionDutch":"In 1465 overleed Isabella van Bourbon, de vrouw van Karel de Stoute, hertog van Bourgondië en heerser over Vlaanderen, Holland, Zeeland, Brabant en Limburg. Hij liet voor haar een praalgraf maken in de Michielsabdij in Antwerpen. Om deze tombe stonden 24 beeldjes van rouwende familieleden en voorouders, zogenoemde pleurants. Ze symboliseerden het belang van de Bourgondische dynastie. Deze tien zijn de enige die bewaard zijn gebleven. ",
-"plaqueDescriptionEnglish":"Isabella of Bourbon, wife of Charles the Bold, duke of Burgundy, Brabant and Limburg and count of Flanders, Holland and Zeeland, died in 1465. He had a superb tomb made for her at St Michiel’s Abbey in Antwerp. Around it stood 24 figures of grieving relatives and ancestors - called weepers. They reflect the Burgundian dynasty’s sense of importance. These ten are the only surviving figures. ",
-"principalMaker":"Borman workshop",
-"artistRole":null,
-"associations":[
-],
-"acquisition":{
-"method":"loan",
-"date":"1887-01-01T00:00:00",
-"creditLine":"On loan from the City of Amsterdam"
-},
-"exhibitions":[
-],
-"materials":[
-"bronze (metal)"
-],
-"techniques":[
-"casting",
-"casting"
-],
-"productionPlaces":[
-"Brussels"
-],
-"dating":{
-"presentingDate":"c. 1475 - c. 1476",
-"sortingDate":1475,
-"period":15,
-"yearEarly":1475,
-"yearLate":1476
-},
-"classification":{
-"iconClassIdentifier":[
-"42E224",
-"46A12",
-"41D2(+82)"
-],
-"iconClassDescription":[
-"'pleurants'",
-"nobility and patriciate; chivalry, knighthood",
-"clothes, costume (+ women's clothes)"
-],
-"motifs":[
-],
-"events":[
-],
-"periods":[
-"14761476"
-],
-"places":[
-],
-"people":[
-"Bourbon, Isabella de"
-],
-"objectNumbers":[
-"BK-AM-33-J"
-]
-},
-"hasImage":true,
-"historicalPersons":[
-"Bourbon, Isabella de"
-],
-"inscriptions":[
-],
-"documentation":[
-"Frits Scholten, 'Isabella's pleurants : een Bourgondische stamboom in beeld', Rijksmuseum Kunstkrant 33 (2007), nr. 2, p. 10-13, afb..",
-"Zie koepelrecord."
-],
-"catRefRPK":[
-],
-"principalOrFirstMaker":"Borman workshop, Renier van Thienen (I)",
-"dimensions":[
-{
-"unit":"cm",
-"type":"height",
-"precision":null,
-"part":null,
-"value":"58"
-},
-{
-"unit":"cm",
-"type":"width",
-"precision":null,
-"part":null,
-"value":"20.5"
-},
-{
-"unit":"cm",
-"type":"depth",
-"precision":null,
-"part":null,
-"value":"12.5"
-}
-],
-"physicalProperties":[
-],
-"physicalMedium":"bronze",
-"longTitle":"Ten weepers from the tomb of Isabella of Bourbon, Borman workshop (attributed to), Renier van Thienen (I) (attributed to), c. 1475 - c. 1476",
-"subTitle":"h 58cm × w 20.5cm × d 12.5cm",
-"scLabelLine":"wooden models: attributed to Jan Borman II (active c. 1475–1520), casting: Renier van Thienen (active c. 1465–1498), Brussels, c. 1475-1476, bronze",
-"label":{
-"title":"Ten weepers from the tomb of Isabella of Bourbon",
-"makerLine":"wooden models: attributed to Jan Borman II (active c. 1475–1520), casting: Renier van Thienen (active c. 1465–1498), Brussels, c. 1475-1476, bronze",
-"description":"Isabella of Bourbon, wife of Charles the Bold, Duke of Burgundy died in 1465. Their daughter Mary built a funeral monument for her in the abbey of Saint Michael in Antwerp. The tomb was surrounded by 24 figures of mourning family members and ancestors, known as weepers (pleurants). They symbolized the importance of the Burgundy dynasty. These ten figures are all that remain.",
-"notes":"BK-AM-33-A t/m J",
-"date":"2013-05-02"
-},
-"showImage":true,
-"location":"HG-0.4"
-},
-"artObjectPage":{
-"id":"en-BK-AM-33-J",
-"similarPages":[
-],
-"lang":"en",
-"objectNumber":"BK-AM-33-J",
-"tags":[
-],
-"plaqueDescription":"Isabella of Bourbon, wife of Charles the Bold, duke of Burgundy, Brabant and Limburg and count of Flanders, Holland and Zeeland, died in 1465. He had a superb tomb made for her at St Michiel’s Abbey in Antwerp. Around it stood 24 figures of grieving relatives and ancestors - called weepers. They reflect the Burgundian dynasty’s sense of importance. These ten are the only surviving figures. ",
-"audioFile1":null,
-"audioFileLabel1":null,
-"audioFileLabel2":null,
-"createdOn":"0001-01-01T00:00:00",
-"updatedOn":"2012-09-18T14:06:39.91398+00:00",
-"adlibOverrides":{
-"titel":null,
-"maker":null,
-"etiketText":null
-}
-}
+    "elapsedMilliseconds":148,
+    "artObject":{
+        "links":{
+            "search":"http://www.rijksmuseum.nl/api/nl/collection"
+        },
+        "id":"en-BK-AM-33-J",
+        "priref":"24251",
+        "objectNumber":"BK-AM-33-J",
+        "language":"en",
+        "title":"Ten weepers from the tomb of Isabella of Bourbon",
+        "copyrightHolder":null,
+        "webImage":{},
+        "colors":[],
+        "colorsWithNormalization":[],
+        "normalizedColors":[],
+        "normalized32Colors":[],
+        "materialsThesaurus":[
+        ],
+        "techniquesThesaurus":[
+        ],
+        "productionPlacesThesaurus":[
+        ],
+        "titles":[
+            "Weeper Wearing a Bourrelet with Dagged Lappets on her Head, from the Tomb of Isabella of Bourbon (1436-1465)"
+        ],
+        "description":"Ze staart recht voor zich uit en heeft de rechterhand over de linker gelegd, waarmee zij een sjaal ophoudt. Op het met vlechten getooide hoofd staat de met een kleinood versierde bourrelet, waarvan korte lappen met gekartelde rand afhangen. Haar overkleed met zakmouwen en een van voren dichtgeregen stijf staande kraag wordt samengehouden door een brede ceintuur. De van de rug hangende mantel met opstaande kraag wordt voor de borst door een band en agrafen vastgehouden en valt tot voor de voeten.",
+        "labelText":null,
+        "objectTypes":[
+            "tomb figure"
+        ],
+        "objectCollection":[
+            "sculptures"
+        ],
+        "makers":[
+        ],
+        "principalMakers":[
+            {
+                "name":"Borman workshop",
+                "unFixedName":"Borman workshop",
+                "placeOfBirth":null,
+                "dateOfBirth":null,
+                "dateOfBirthPrecision":null,
+                "dateOfDeath":null,
+                "dateOfDeathPrecision":null,
+                "placeOfDeath":null,
+                "occupation":[
+                ],
+                "roles":[
+                    "sculptor"
+                ],
+                "nationality":null,
+                "biography":null,
+                "productionPlaces":[
+                ],
+                "qualification":"attributed to",
+                "labelDesc":"attributed to Borman workshop"
+            },
+            {
+                "name":"Renier van Thienen (I)",
+                "unFixedName":"Thienen, Renier van (I)",
+                "placeOfBirth":"Tienen",
+                "dateOfBirth":"1465",
+                "dateOfBirthPrecision":null,
+                "dateOfDeath":"1498-06",
+                "dateOfDeathPrecision":"before",
+                "placeOfDeath":null,
+                "occupation":[
+                    "caster",
+                    "brazier"
+                ],
+                "roles":[
+                    "caster"
+                ],
+                "nationality":"Vlaams",
+                "biography":null,
+                "productionPlaces":[
+                    "Brussels"
+                ],
+                "qualification":"attributed to",
+                "labelDesc":"attributed to Renier van Thienen (I) (1465 - before jun-1498), Brussels"
+            }
+        ],
+        "plaqueDescriptionDutch":"In 1465 overleed Isabella van Bourbon, de vrouw van Karel de Stoute, hertog van Bourgondië en heerser over Vlaanderen, Holland, Zeeland, Brabant en Limburg. Hij liet voor haar een praalgraf maken in de Michielsabdij in Antwerpen. Om deze tombe stonden 24 beeldjes van rouwende familieleden en voorouders, zogenoemde pleurants. Ze symboliseerden het belang van de Bourgondische dynastie. Deze tien zijn de enige die bewaard zijn gebleven. ",
+        "plaqueDescriptionEnglish":"Isabella of Bourbon, wife of Charles the Bold, duke of Burgundy, Brabant and Limburg and count of Flanders, Holland and Zeeland, died in 1465. He had a superb tomb made for her at St Michiel’s Abbey in Antwerp. Around it stood 24 figures of grieving relatives and ancestors - called weepers. They reflect the Burgundian dynasty’s sense of importance. These ten are the only surviving figures. ",
+        "principalMaker":"Borman workshop",
+        "artistRole":null,
+        "associations":[
+        ],
+        "acquisition":{
+            "method":"loan",
+            "date":"1887-01-01T00:00:00",
+            "creditLine":"On loan from the City of Amsterdam"
+        },
+        "exhibitions":[
+        ],
+        "materials":[
+            "bronze (metal)"
+        ],
+        "techniques":[
+            "casting",
+            "casting"
+        ],
+        "productionPlaces":[
+            "Brussels"
+        ],
+        "dating":{
+            "presentingDate":"c. 1475 - c. 1476",
+            "sortingDate":1475,
+            "period":15,
+            "yearEarly":1475,
+            "yearLate":1476
+        },
+        "classification":{
+            "iconClassIdentifier":[
+                "42E224",
+                "46A12",
+                "41D2(+82)"
+            ],
+            "iconClassDescription":[
+                "'pleurants'",
+                "nobility and patriciate; chivalry, knighthood",
+                "clothes, costume (+ women's clothes)"
+            ],
+            "motifs":[
+            ],
+            "events":[
+            ],
+            "periods":[
+                "14761476"
+            ],
+            "places":[
+            ],
+            "people":[
+                "Bourbon, Isabella de"
+            ],
+            "objectNumbers":[
+                "BK-AM-33-J"
+            ]
+        },
+        "hasImage":true,
+        "historicalPersons":[
+            "Bourbon, Isabella de"
+        ],
+        "inscriptions":[
+        ],
+        "documentation":[
+            "Frits Scholten, 'Isabella's pleurants : een Bourgondische stamboom in beeld', Rijksmuseum Kunstkrant 33 (2007), nr. 2, p. 10-13, afb..",
+            "Zie koepelrecord."
+        ],
+        "catRefRPK":[
+        ],
+        "principalOrFirstMaker":"Borman workshop, Renier van Thienen (I)",
+        "dimensions":[
+            {
+                "unit":"cm",
+                "type":"height",
+                "precision":null,
+                "part":null,
+                "value":"58"
+            },
+            {
+                "unit":"cm",
+                "type":"width",
+                "precision":null,
+                "part":null,
+                "value":"20.5"
+            },
+            {
+                "unit":"cm",
+                "type":"depth",
+                "precision":null,
+                "part":null,
+                "value":"12.5"
+            }
+        ],
+        "physicalProperties":[
+        ],
+        "physicalMedium":"bronze",
+        "longTitle":"Ten weepers from the tomb of Isabella of Bourbon, Borman workshop (attributed to), Renier van Thienen (I) (attributed to), c. 1475 - c. 1476",
+        "subTitle":"h 58cm × w 20.5cm × d 12.5cm",
+        "scLabelLine":"wooden models: attributed to Jan Borman II (active c. 1475–1520), casting: Renier van Thienen (active c. 1465–1498), Brussels, c. 1475-1476, bronze",
+        "label":{
+            "title":"Ten weepers from the tomb of Isabella of Bourbon",
+            "makerLine":"wooden models: attributed to Jan Borman II (active c. 1475–1520), casting: Renier van Thienen (active c. 1465–1498), Brussels, c. 1475-1476, bronze",
+            "description":"Isabella of Bourbon, wife of Charles the Bold, Duke of Burgundy died in 1465. Their daughter Mary built a funeral monument for her in the abbey of Saint Michael in Antwerp. The tomb was surrounded by 24 figures of mourning family members and ancestors, known as weepers (pleurants). They symbolized the importance of the Burgundy dynasty. These ten figures are all that remain.",
+            "notes":"BK-AM-33-A t/m J",
+            "date":"2013-05-02"
+        },
+        "showImage":true,
+        "location":"HG-0.4"
+    },
+    "artObjectPage":{
+        "id":"en-BK-AM-33-J",
+        "similarPages":[
+        ],
+        "lang":"en",
+        "objectNumber":"BK-AM-33-J",
+        "tags":[
+        ],
+        "plaqueDescription":"Isabella of Bourbon, wife of Charles the Bold, duke of Burgundy, Brabant and Limburg and count of Flanders, Holland and Zeeland, died in 1465. He had a superb tomb made for her at St Michiel’s Abbey in Antwerp. Around it stood 24 figures of grieving relatives and ancestors - called weepers. They reflect the Burgundian dynasty’s sense of importance. These ten are the only surviving figures. ",
+        "audioFile1":null,
+        "audioFileLabel1":null,
+        "audioFileLabel2":null,
+        "createdOn":"0001-01-01T00:00:00",
+        "updatedOn":"2012-09-18T14:06:39.91398+00:00",
+        "adlibOverrides":{
+            "titel":null,
+            "maker":null,
+            "etiketText":null
+        }
+    }
 }

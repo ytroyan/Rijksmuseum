@@ -15,9 +15,7 @@ protocol CollectionProviding {
 }
 
 class CollectionProvider: CollectionProviding {
-    
-    var collection: [ArtObject] = []
-    
+        
     var offset: Int = 0
     var limit: Int = 0
     
@@ -35,12 +33,6 @@ class CollectionProvider: CollectionProviding {
     func getCollection() async throws -> [ArtObject] {
         self.provider.setPage(offset: offset, limit: limit)
         let objects = try await self.provider.getCollection().compactMap {ArtObject.build(from: $0)}
-        self.collection += objects
         return objects
     }
-    
-    func reset() {
-        collection = []
-    }
-    
 }

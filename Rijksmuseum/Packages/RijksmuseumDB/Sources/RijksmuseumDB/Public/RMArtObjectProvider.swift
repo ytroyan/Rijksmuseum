@@ -20,7 +20,9 @@ public class RMArtObjectProvider {
         let request: RequestProtocol =  DetailArtObjectRequest(apiKey: self.settings.apiKey,
                                                          language: self.settings.language.rawValue,
                                                          objectNumber: objectNumber)
+        print("request \(request.request)")
         let endpoint = Endpoint(request: request, responseType: DetailArtObjectResponse.self)
-        return try await urlSession.getRequest(endpoint).artObject
+        let response = try await urlSession.getRequest(endpoint)
+        return response.artObject
     }
 }

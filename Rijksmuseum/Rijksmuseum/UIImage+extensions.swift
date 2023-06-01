@@ -28,3 +28,9 @@ extension UIImage {
         return UIImage.animatedImage(with: images, duration: duration)!
     }
 }
+
+extension UIImage {
+    static var emptyData: UIImage {
+        UIImage(systemName: "wifi.exclamationmark", withConfiguration: UIImage.SymbolConfiguration(pointSize: 60))!
+    }
+}
