@@ -1,8 +1,8 @@
 //
-//  File.swift
-//  
+//  MockURLProtocol.swift
+//  RijksmuseumTests
 //
-//  Created by Troian on 29.05.2023.
+//  Created by Troian on 01.06.2023.
 //
 
 import Foundation

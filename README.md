@@ -10,8 +10,7 @@ These are the requirements for our programming assessment:
 - Items should have text and image 
 - Page should be paginated
 - A detailpage, with more details about the item
-- Loading and converting JSON to objects should be asynchronous, a loading icon / animation
-should be shown
+- Loading and converting JSON to objects should be asynchronous, a loading icon / animation should be shown
 - Automated tests should be present (full coverage not needed off course)
 - No SwiftUI, no xib files or storyboards.
 Things we will be focussing on when reviewing:
@@ -20,4 +19,3 @@ Things we will be focussing on when reviewing:
 - Handling of failures (failed network calls, etc)
 You’re free to use whichever library you’re used to in your own projects, without limitations. Just give us a heads-up if you reach for something more exotic that heavily impacts what the implementation looks like. After you’re done, send us the link to the repo.
 Good Luck!
-
