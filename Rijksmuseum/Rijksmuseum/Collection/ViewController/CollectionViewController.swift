@@ -67,7 +67,7 @@ class CollectionViewController: UICollectionViewController {
     }()
     
     lazy var emptyDataImageView: UIImageView = {
-        let image = UIImage(systemName: "wifi.exclamationmark", withConfiguration: UIImage.SymbolConfiguration(pointSize: 60))
+        let image = UIImage.emptyData
         let view = UIImageView(image: image)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view

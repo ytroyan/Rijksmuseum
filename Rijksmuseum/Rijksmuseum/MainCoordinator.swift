@@ -36,8 +36,7 @@ final class MainCoordinator {
 
 extension MainCoordinator: MainInteractorDelegate {
     func showDetailArtObject(id: String) {
-        let vc = UIViewController()
-        vc.view.backgroundColor = .brown
+        let vc = DetailArtObjectViewController.build(self, artObjectId: id)
         mainNavigation?.pushViewController(vc, animated: true)
     }
 }

@@ -28,6 +28,8 @@
 		1709FB032A28C6EE00911F88 /* MockImageProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1709FB022A28C6EE00911F88 /* MockImageProviding.swift */; };
 		1709FB052A28C70F00911F88 /* MockCollectionViewPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1709FB042A28C70F00911F88 /* MockCollectionViewPresenting.swift */; };
 		1709FB072A28C83D00911F88 /* UIImage+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1709FB062A28C83D00911F88 /* UIImage+extensions.swift */; };
+		1709FB092A28CEFA00911F88 /* DetailArtObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1709FB082A28CEFA00911F88 /* DetailArtObjectViewController.swift */; };
+		1709FB0A2A28CEFB00911F88 /* DetailArtObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1709FB082A28CEFA00911F88 /* DetailArtObjectViewController.swift */; };
 		1746D1D62A2370FF0070E65A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746D1D52A2370FF0070E65A /* AppDelegate.swift */; };
 		1746D1D82A2370FF0070E65A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746D1D72A2370FF0070E65A /* SceneDelegate.swift */; };
 		1746D1DF2A2371010070E65A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1746D1DE2A2371010070E65A /* Assets.xcassets */; };
@@ -43,6 +45,17 @@
 		179ECFED2A274CE90048AC88 /* CollectionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179ECFEC2A274CE90048AC88 /* CollectionProvider.swift */; };
 		179ECFEF2A274D5D0048AC88 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179ECFEE2A274D5D0048AC88 /* ImageProvider.swift */; };
 		179ECFF12A2755890048AC88 /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179ECFF02A2755890048AC88 /* CollectionHeaderView.swift */; };
+		17A005422A28E41D006D2BEF /* DetailArtObjectViewController+build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A005412A28E41D006D2BEF /* DetailArtObjectViewController+build.swift */; };
+		17A005442A28E434006D2BEF /* DetailArtObjectViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A005432A28E434006D2BEF /* DetailArtObjectViewPresenter.swift */; };
+		17A005462A28E453006D2BEF /* DetailArtObjectViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A005452A28E453006D2BEF /* DetailArtObjectViewInteractor.swift */; };
+		17A005482A28EE69006D2BEF /* DetailArtObjectProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A005472A28EE69006D2BEF /* DetailArtObjectProvider.swift */; };
+		17A0054A2A28EF79006D2BEF /* DetailArtObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A005492A28EF79006D2BEF /* DetailArtObject.swift */; };
+		17A005512A293B7D006D2BEF /* DetailArtObjectViewController+build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A005412A28E41D006D2BEF /* DetailArtObjectViewController+build.swift */; };
+		17A005522A293B80006D2BEF /* DetailArtObjectViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A005432A28E434006D2BEF /* DetailArtObjectViewPresenter.swift */; };
+		17A005532A293B83006D2BEF /* DetailArtObjectViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A005452A28E453006D2BEF /* DetailArtObjectViewInteractor.swift */; };
+		17A005542A293B88006D2BEF /* DetailArtObjectProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A005472A28EE69006D2BEF /* DetailArtObjectProvider.swift */; };
+		17A005552A293B8A006D2BEF /* DetailArtObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A005492A28EF79006D2BEF /* DetailArtObject.swift */; };
+		17A005562A293B9B006D2BEF /* UIImage+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1709FB062A28C83D00911F88 /* UIImage+extensions.swift */; };
 		17FC4E242A24FCCE00583A5A /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC4E232A24FCCE00583A5A /* CollectionViewController.swift */; };
 		17FC4E262A24FCF500583A5A /* CollectionViewController+build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC4E252A24FCF500583A5A /* CollectionViewController+build.swift */; };
 		17FC4E282A24FDA000583A5A /* ColectionViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC4E272A24FDA000583A5A /* ColectionViewInteractor.swift */; };
@@ -77,6 +90,7 @@
 		1709FB022A28C6EE00911F88 /* MockImageProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImageProviding.swift; sourceTree = "<group>"; };
 		1709FB042A28C70F00911F88 /* MockCollectionViewPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCollectionViewPresenting.swift; sourceTree = "<group>"; };
 		1709FB062A28C83D00911F88 /* UIImage+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extensions.swift"; sourceTree = "<group>"; };
+		1709FB082A28CEFA00911F88 /* DetailArtObjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArtObjectViewController.swift; sourceTree = "<group>"; };
 		1746D1D22A2370FF0070E65A /* Rijksmuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rijksmuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1746D1D52A2370FF0070E65A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1746D1D72A2370FF0070E65A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +111,12 @@
 		179ECFEC2A274CE90048AC88 /* CollectionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionProvider.swift; sourceTree = "<group>"; };
 		179ECFEE2A274D5D0048AC88 /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
 		179ECFF02A2755890048AC88 /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
+		17A005412A28E41D006D2BEF /* DetailArtObjectViewController+build.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailArtObjectViewController+build.swift"; sourceTree = "<group>"; };
+		17A005432A28E434006D2BEF /* DetailArtObjectViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArtObjectViewPresenter.swift; sourceTree = "<group>"; };
+		17A005452A28E453006D2BEF /* DetailArtObjectViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArtObjectViewInteractor.swift; sourceTree = "<group>"; };
+		17A005472A28EE69006D2BEF /* DetailArtObjectProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArtObjectProvider.swift; sourceTree = "<group>"; };
+		17A005492A28EF79006D2BEF /* DetailArtObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArtObject.swift; sourceTree = "<group>"; };
+		17A005502A293AE8006D2BEF /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
 		17FC4E232A24FCCE00583A5A /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		17FC4E252A24FCF500583A5A /* CollectionViewController+build.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionViewController+build.swift"; sourceTree = "<group>"; };
 		17FC4E272A24FDA000583A5A /* ColectionViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColectionViewInteractor.swift; sourceTree = "<group>"; };
@@ -206,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				1746D2092A23AC270070E65A /* README.md */,
+				17A005502A293AE8006D2BEF /* TestPlan.xctestplan */,
 				1746D2252A24023E0070E65A /* Packages */,
 				1746D1D42A2370FF0070E65A /* Rijksmuseum */,
 				1746D1EB2A2371010070E65A /* RijksmuseumTests */,
@@ -231,8 +252,8 @@
 				1746D1D52A2370FF0070E65A /* AppDelegate.swift */,
 				1746D1D72A2370FF0070E65A /* SceneDelegate.swift */,
 				1746D2052A2374F30070E65A /* MainCoordinator.swift */,
-				178B3E282A253B4A0099C9D5 /* AppConfiguration.swift */,
-				1709FB062A28C83D00911F88 /* UIImage+extensions.swift */,
+				17A005572A293BA5006D2BEF /* Helpers */,
+				17A005402A28E3F4006D2BEF /* DetailArtObject */,
 				17FC4E2B2A24FDBB00583A5A /* Collection */,
 				1746D1DE2A2371010070E65A /* Assets.xcassets */,
 				1746D1E02A2371010070E65A /* LaunchScreen.storyboard */,
@@ -275,6 +296,68 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		17A005402A28E3F4006D2BEF /* DetailArtObject */ = {
+			isa = PBXGroup;
+			children = (
+				17A0054B2A28F0CC006D2BEF /* ViewController */,
+				17A0054C2A28F0DA006D2BEF /* Presenter */,
+				17A0054D2A28F0E2006D2BEF /* Interactor */,
+				17A0054E2A28F0EE006D2BEF /* Workers */,
+				17A0054F2A28F100006D2BEF /* Model */,
+			);
+			path = DetailArtObject;
+			sourceTree = "<group>";
+		};
+		17A0054B2A28F0CC006D2BEF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1709FB082A28CEFA00911F88 /* DetailArtObjectViewController.swift */,
+				17A005412A28E41D006D2BEF /* DetailArtObjectViewController+build.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		17A0054C2A28F0DA006D2BEF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				17A005432A28E434006D2BEF /* DetailArtObjectViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		17A0054D2A28F0E2006D2BEF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				17A005452A28E453006D2BEF /* DetailArtObjectViewInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		17A0054E2A28F0EE006D2BEF /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				17A005472A28EE69006D2BEF /* DetailArtObjectProvider.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		17A0054F2A28F100006D2BEF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				17A005492A28EF79006D2BEF /* DetailArtObject.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		17A005572A293BA5006D2BEF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				178B3E282A253B4A0099C9D5 /* AppConfiguration.swift */,
+				1709FB062A28C83D00911F88 /* UIImage+extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		17FC4E2B2A24FDBB00583A5A /* Collection */ = {
@@ -427,6 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17A005462A28E453006D2BEF /* DetailArtObjectViewInteractor.swift in Sources */,
 				178B3E2B2A25EA8A0099C9D5 /* CollectionViewCell.swift in Sources */,
 				17FC4E242A24FCCE00583A5A /* CollectionViewController.swift in Sources */,
 				17FC4E2D2A2529B400583A5A /* CollectionViewCellConfigurator.swift in Sources */,
@@ -434,14 +518,19 @@
 				1746D2062A2374F30070E65A /* MainCoordinator.swift in Sources */,
 				1746D1D62A2370FF0070E65A /* AppDelegate.swift in Sources */,
 				179ECFEB2A2740DC0048AC88 /* ArtObject.swift in Sources */,
+				17A005482A28EE69006D2BEF /* DetailArtObjectProvider.swift in Sources */,
+				17A0054A2A28EF79006D2BEF /* DetailArtObject.swift in Sources */,
 				178B3E292A253B4A0099C9D5 /* AppConfiguration.swift in Sources */,
 				1746D1D82A2370FF0070E65A /* SceneDelegate.swift in Sources */,
+				17A005422A28E41D006D2BEF /* DetailArtObjectViewController+build.swift in Sources */,
 				17FC4E282A24FDA000583A5A /* ColectionViewInteractor.swift in Sources */,
 				179ECFED2A274CE90048AC88 /* CollectionProvider.swift in Sources */,
 				179ECFF12A2755890048AC88 /* CollectionHeaderView.swift in Sources */,
 				179ECFEF2A274D5D0048AC88 /* ImageProvider.swift in Sources */,
 				17FC4E262A24FCF500583A5A /* CollectionViewController+build.swift in Sources */,
+				1709FB092A28CEFA00911F88 /* DetailArtObjectViewController.swift in Sources */,
 				1709FB072A28C83D00911F88 /* UIImage+extensions.swift in Sources */,
+				17A005442A28E434006D2BEF /* DetailArtObjectViewPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,15 +539,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				1709FAF62A28B92400911F88 /* CollectionViewController.swift in Sources */,
+				17A005552A293B8A006D2BEF /* DetailArtObject.swift in Sources */,
+				17A005562A293B9B006D2BEF /* UIImage+extensions.swift in Sources */,
 				1709FB052A28C70F00911F88 /* MockCollectionViewPresenting.swift in Sources */,
+				17A005522A293B80006D2BEF /* DetailArtObjectViewPresenter.swift in Sources */,
+				17A005542A293B88006D2BEF /* DetailArtObjectProvider.swift in Sources */,
 				1709FAFA2A28BC2300911F88 /* MainCoordinator.swift in Sources */,
+				17A005512A293B7D006D2BEF /* DetailArtObjectViewController+build.swift in Sources */,
 				1709FAFF2A28BCA200911F88 /* CollectionViewCell.swift in Sources */,
 				1709FAED2A28B61000911F88 /* MockImageStorage.swift in Sources */,
 				1709FAF82A28B92A00911F88 /* CollectionViewCellConfigurator.swift in Sources */,
 				1709FAE92A28AF0D00911F88 /* ImageProviderTests.swift in Sources */,
 				1709FAFE2A28BC9400911F88 /* CollectionHeaderView.swift in Sources */,
 				1709FAF52A28B91C00911F88 /* CollectionProvider.swift in Sources */,
+				1709FB0A2A28CEFB00911F88 /* DetailArtObjectViewController.swift in Sources */,
 				1746D1ED2A2371010070E65A /* RijksmuseumTests.swift in Sources */,
+				17A005532A293B83006D2BEF /* DetailArtObjectViewInteractor.swift in Sources */,
 				1709FAF92A28BC1800911F88 /* ArtObject.swift in Sources */,
 				1709FAF22A28B77D00911F88 /* ColectionViewInteractorTests.swift in Sources */,
 				1709FAFD2A28BC8600911F88 /* CollectionViewController+build.swift in Sources */,
@@ -634,8 +730,7 @@
 				INFOPLIST_FILE = Rijksmuseum/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -661,8 +756,7 @@
 				INFOPLIST_FILE = Rijksmuseum/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

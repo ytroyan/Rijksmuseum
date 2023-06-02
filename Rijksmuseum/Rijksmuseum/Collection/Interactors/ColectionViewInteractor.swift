@@ -18,6 +18,7 @@ protocol CollectionViewInteracting {
 protocol ColectionViewDataProvider {
     var items: [ArtObject] {get}
     func loadImage(for object: ArtObject, handler: ((UIImage?)->Void)?)
+    func item(by indexPath: IndexPath) -> ArtObject
 }
 
 
@@ -81,15 +82,21 @@ final class ColectionViewInteractor: CollectionViewInteracting {
     }
     
     func didSelectItem(at indexPath: IndexPath) {
-        let id = ""
+        let id = item(by: indexPath).objectNumber
         self.delegate?.showDetailArtObject(id: id)
     }
 }
 
 extension ColectionViewInteractor: ColectionViewDataProvider {
+    func item(by indexPath: IndexPath) -> ArtObject {
+        let uniques: Set<String> = Set(items.compactMap{"\($0.principalOrFirstMaker)"})
+        let arrayOfSections = uniques.sorted()
+        let sectionName = arrayOfSections[indexPath.section]
+        return items.filter {$0.principalOrFirstMaker == sectionName}[indexPath.row]
+    }
+    
     func loadImage(for object: ArtObject, handler: ((UIImage?) -> Void)?) {
         guard let urlString = object.imageURL, object.image == nil else {return}
-        
         Task {
             let image = try? await imageProvider.loadImage(for: urlString)
             DispatchQueue.main.async {

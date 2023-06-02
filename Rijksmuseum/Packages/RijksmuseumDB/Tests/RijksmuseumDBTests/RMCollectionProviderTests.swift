@@ -32,12 +32,16 @@ final class RMCollectionProviderTests: XCTestCase {
         let mockURLSession = URLSession(configuration: configuration)
         let sut = RMCollectionProvider.init(settings: settings, offset: 1, limit: 1, urlSession: mockURLSession)
         
-        let object = RMArtObject(id: "test", objectNumber: "test", title: "", webImage: nil, headerImage: nil)
+        let object = RMArtObject(id: "test",
+                                 objectNumber: "test",
+                                 title: "",
+                                 principalOrFirstMaker: "",
+                                 webImage: nil)
         let arrayOfObjects: [RMArtObject] = [object]
         let response = CollectionResponse(count: 1, artObjects: arrayOfObjects)
         let encoder = JSONEncoder()
         let data = try! encoder.encode(response)
-        MockURLProtocol.mockData["/api/nl/collection/BK-AM-33-J?key=test"] = data
+        MockURLProtocol.mockData["/api/nl/collection?key=test&ps=1&p=1&s=artist&imgonly=true"] = data
         let artObjects = try await sut.getCollection()
         XCTAssertEqual(artObjects.count, 1)
     }

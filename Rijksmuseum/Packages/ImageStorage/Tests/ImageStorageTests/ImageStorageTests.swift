@@ -3,7 +3,7 @@ import XCTest
 
 final class ImageStorageTests: XCTestCase {
     let sut = ImageStorage()
-    let key = "test"
+    let key = "https://lh5.ggpht.com/cIiv-D9pOhoLYYa5xziM4mc1FvEm144DhofefO98-oX95Ix_4XLqk-i_3xIf8n6xhnr4JNjg0fiEPijHFVFDKIYKaOA=s0"
     
     override func setUpWithError() throws {
         sut.removeAll()
@@ -19,6 +19,10 @@ final class ImageStorageTests: XCTestCase {
         }
         //given
         let givenObject = try XCTUnwrap(UIImage(systemName: "multiply.circle.fill"))
+        guard let key = self.key.components(separatedBy: "/").last else {
+            XCTFail("")
+            return
+        }
         let object = sut.loadImage(for: key)
         XCTAssertNil(object)
         //when

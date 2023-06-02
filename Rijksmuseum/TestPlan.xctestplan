@@ -1,0 +1,45 @@
+{
+  "configurations" : [
+    {
+      "id" : "43F92E3A-3D3D-45B8-A653-095E9E0746B4",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/ImageStorage",
+        "identifier" : "ImageStorageTests",
+        "name" : "ImageStorageTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Rijksmuseum.xcodeproj",
+        "identifier" : "1746D1E72A2371010070E65A",
+        "name" : "RijksmuseumTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Rijksmuseum.xcodeproj",
+        "identifier" : "1746D1F12A2371010070E65A",
+        "name" : "RijksmuseumUITests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/RijksmuseumDB",
+        "identifier" : "RijksmuseumDBTests",
+        "name" : "RijksmuseumDBTests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -24,7 +24,7 @@ class ImageProvider: ImageProviding {
     }
     
     public func loadImage(for url: String) async throws -> UIImage? {
-        if let image = storage.loadImage(for: url) {
+        if let image = storage.loadImage(for: url.components(separatedBy: "/").last ?? url) {
             return image
         } else {
             guard let imageURL = URL(string: url) else { throw NSError(domain: "InvalidImage", code: 0, userInfo: nil) }
@@ -33,7 +33,7 @@ class ImageProvider: ImageProviding {
             guard let image = UIImage(data: data) else {
                 throw NSError(domain: "InvalidImage", code: 0, userInfo: nil)
             }
-            storage.save(image, for: url)
+            storage.save(image, for: url.components(separatedBy: "/").last ?? url)
             return image
         }
     }
