@@ -29,8 +29,14 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:TestPlan.xctestplan"
+            reference = "container:RijksmuseumAllTests.xctestplan"
             default = "YES">
+         </TestPlanReference>
+         <TestPlanReference
+            reference = "container:../RijksmuseumUITests.xctestplan">
+         </TestPlanReference>
+         <TestPlanReference
+            reference = "container:../RijksmuseumUnitTests.xctestplan">
          </TestPlanReference>
       </TestPlans>
       <Testables>

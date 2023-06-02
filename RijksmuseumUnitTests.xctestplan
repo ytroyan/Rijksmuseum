@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "60C52A56-5317-49A4-AA5F-2B068207B6F5",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/ImageStorage",
+        "identifier" : "ImageStorageTests",
+        "name" : "ImageStorageTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Rijksmuseum.xcodeproj",
+        "identifier" : "1746D1E72A2371010070E65A",
+        "name" : "RijksmuseumTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/RijksmuseumDB",
+        "identifier" : "RijksmuseumDBTests",
+        "name" : "RijksmuseumDBTests"
+      }
+    }
+  ],
+  "version" : 1
+}

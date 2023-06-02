@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "AA67BDD6-E68D-43E7-9EA4-D7344960D879",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Rijksmuseum.xcodeproj",
+        "identifier" : "1746D1F12A2371010070E65A",
+        "name" : "RijksmuseumUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
