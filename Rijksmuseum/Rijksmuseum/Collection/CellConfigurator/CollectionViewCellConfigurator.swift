@@ -48,6 +48,8 @@ class CollectionViewCellConfigurator: CollectionViewCellConfigurating {
             content.text = item.title
             content.textProperties.font = UIFont.preferredFont(forTextStyle: .caption2)
             cell.contentConfiguration = content
+            cell.accessibilityIdentifier = "collection.cell.\(indexPath.section)-\(indexPath.row)"
+            cell.accessibilityLabel = item.title
             self.updateContent(item: item)
         }
     }

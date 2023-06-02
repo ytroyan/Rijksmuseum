@@ -41,6 +41,8 @@ class DetailArtObjectViewController: UIViewController {
         button.setTitle("open", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        button.accessibilityIdentifier = "DetailArtObject.openButton"
+        button.accessibilityLabel = "Open button"
         return button
     }()
     
